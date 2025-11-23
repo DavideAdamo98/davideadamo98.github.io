@@ -4,40 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Davide Adamo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <div class="container">
-    <h1>Davide Adamo</h1>
-    <p>Applied mathematician. I apply ML models to archaeozoological data.</p>
+  <header>
     <nav>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="publications.html">Pubblicazioni</a>
+      <a href="research.html">Research & Talks</a>
+      <a href="cv.html">CV</a>
     </nav>
+  </header>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>Breve biografia, attualmente dottorando al CEPAM/INRIA Sophia Antipolis...</p>
-    </section>
+  <main class="container">
+    <h1>Davide Adamo</h1>
+    <p><strong>Dottorando in Matematica Applicata</strong><br>
+      CEPAM - Université Côte d’Azur · INRIA Sophia Antipolis
+    </p>
 
-    <section id="research">
-      <h2>Research</h2>
-      <ul>
-        <li>Procrustes–Wasserstein distances for 3D morphometrics</li>
-        <li>Topological Data Analysis for animal bone classification</li>
-        <li>Variational Multiple Kernel Learning for shape inference</li>
-      </ul>
-    </section>
+    <h2>Breve biografia</h2>
+    <p>
+      Sono un matematico applicato con interessi nel machine learning, nella topological data analysis e nelle loro
+      applicazioni in archeozoologia. Attualmente il mio lavoro si concentra sull'analisi morfometrica 3D delle ossa di
+      caprini, con particolare attenzione agli astragali, utilizzando metodi di apprendimento statistico e geometrico
+      per esplorare la domesticazione animale e le variazioni morfologiche nel tempo.
+    </p>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:Davide.ADAMO@univ-cotedazur.fr">Davide.ADAMO@univ-cotedazur.fr</a></p>
-      <p><a href="https://github.com/DavideAdamo98">GitHub</a> · 
-         <a href="https://scholar.google.com/">Google Scholar</a></p>
-    </section>
-  </div>
+    <p>
+      Collaboro con i laboratori <strong>CEPAM</strong> e <strong>MAASAI (INRIA Sophia Antipolis)</strong>, sviluppando
+      modelli computazionali innovativi per la classificazione automatica delle specie animali basati su dati
+      tridimensionali.
+    </p>
+  </main>
 
-  <script src="script.js"></script>
+  <footer>
+    © 2025 Davide Adamo ·
+    <a href="mailto:davide.adamo@example.com">davide.adamo@example.com</a>
+  </footer>
 </body>
 </html>
