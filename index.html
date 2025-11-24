@@ -19,6 +19,7 @@
         <a href="publications.html">Publications</a>
         <a href="research.html">Talks</a>
         <a href="cv.html">CV</a>
+        <button id="theme-toggle" aria-label="Cambia tema">🌙</button>
       </div>
     </nav>
   </header>
@@ -54,5 +55,26 @@
     © 2025 Davide Adamo ·
     <a href="mailto:Davide.ADAMO@univ-cotedazur.fr">Davide.ADAMO@univ-cotedazur.fr</a>
   </footer>
+
+
+
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+  
+    // Salva la preferenza dell’utente
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggle.textContent = '☀️';
+    }
+  
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const darkModeEnabled = body.classList.contains('dark-mode');
+      toggle.textContent = darkModeEnabled ? '☀️' : '🌙';
+      localStorage.setItem('theme', darkModeEnabled ? 'dark' : 'light');
+    });
+  </script>
+  
 </body>
 </html>
