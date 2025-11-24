@@ -167,3 +167,45 @@ a:hover {
 a:hover::after {
   width: 100%;
 }
+
+
+/* ===== Tema scuro ===== */
+body.dark-mode {
+  background-color: #121212;
+  color: #e6e6e6;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode a {
+  color: #66aaff;
+}
+
+body.dark-mode a::after {
+  background-color: #66aaff;
+}
+
+body.dark-mode .btn {
+  background-color: #1a73e8;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #0f5fd6;
+}
+
+/* ===== Pulsante tema ===== */
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+#theme-toggle:hover {
+  transform: rotate(20deg);
+}
