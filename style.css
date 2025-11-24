@@ -40,6 +40,17 @@ nav {
   color: #0070f3;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* spaziatura fra le voci */
+}
+
+#theme-toggle {
+  margin-left: 20px; /* distanza dal link “CV” */
+}
+
+
 /* ===== Contenitore principale ===== */
 .container {
   max-width: 800px;
@@ -238,4 +249,8 @@ body.dark-mode .btn {
 
 body.dark-mode .btn:hover {
   background-color: #0f5fd6;
+}
+
+body.dark-mode .nav-left a.logo {
+  color: #ffffff;
 }
