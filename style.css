@@ -503,3 +503,22 @@ body.dark-mode .social-btn:hover {
   color: white;
   border-color: #0070f3;
 }
+
+
+/* ===== Impostazioni testo normali per le pagine di contenuto ===== */
+.container ul,
+.container ol {
+  text-align: left;
+  margin-left: 1.2rem;
+  padding-left: 1.2rem;
+  list-style-position: outside;
+}
+
+.container li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+body:not(.home-page) .container {
+  text-align: left;
+}
