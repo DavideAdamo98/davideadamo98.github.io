@@ -522,3 +522,25 @@ body.dark-mode .social-btn:hover {
 body:not(.home-page) .container {
   text-align: left;
 }
+
+
+/* ===== Correzione: allineamento per testi e liste ===== */
+.container p,
+.container ul,
+.container ol {
+  text-align: left !important;
+  margin-left: 0;
+  padding-left: 1.4rem;
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+body.activity-page .container {
+  text-align: left !important;
+}
