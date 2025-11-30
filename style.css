@@ -219,26 +219,7 @@ footer {
   transform: translateY(-2px);
 }
 
-/* Dark mode pulita */
-body.dark-mode {
-  background-color: #121212;
-  color: #ddd;
-}
 
-body.dark-mode .bio {
-  color: #ddd;
-}
-
-body.dark-mode .social-btn {
-  background-color: #222;
-  border-color: #444;
-  color: #ddd;
-}
-
-body.dark-mode .social-btn:hover {
-  background-color: #0070f3;
-  color: white;
-}
 
 
 /* ===== Pubblicazioni ===== */
@@ -392,4 +373,133 @@ body.dark-mode .btn:hover {
 
 body.dark-mode .nav-left a.logo {
   color: #ffffff;
+}
+
+
+
+
+
+/* ===== Ristilizzazione Homepage - Stile accademico sobrio ===== */
+
+/* Impostazioni di base */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1.5rem auto;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.name-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+  color: #111;
+}
+
+.affiliation {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.bio {
+  text-align: justify;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+}
+
+/* Link accademici (CEPAM, INRIA ecc.) */
+.affiliation a,
+.bio a {
+  color: #0066cc;
+  text-decoration: none;
+  position: relative;
+}
+
+.affiliation a::after,
+.bio a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background-color: #0066cc;
+  transition: width 0.3s ease;
+}
+
+.affiliation a:hover::after,
+.bio a:hover::after {
+  width: 100%;
+}
+
+/* Pulsanti social */
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.8rem;
+}
+
+.social-btn {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+  background-color: #f2f2f2;
+  color: #333;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.social-btn:hover {
+  background-color: #0070f3;
+  color: #fff;
+  border-color: #0070f3;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 3rem;
+}
+
+/* Tema scuro ottimizzato */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .bio {
+  color: #ccc;
+}
+
+body.dark-mode .social-btn {
+  background-color: #222;
+  border-color: #444;
+  color: #ddd;
+}
+
+body.dark-mode .social-btn:hover {
+  background-color: #0070f3;
+  color: white;
+  border-color: #0070f3;
 }
