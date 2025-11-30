@@ -544,3 +544,31 @@ body:not(.home-page) .container {
 body.activity-page .container {
   text-align: left !important;
 }
+
+
+
+/* ===== Layout differenziato Home vs altre pagine ===== */
+
+/* Home centrata */
+body.home-page .container {
+  text-align: center;
+}
+
+/* Altre pagine allineate a sinistra */
+body.content-page .container {
+  text-align: left;
+}
+
+/* Liste nelle pagine di contenuto */
+body.content-page .container ul,
+body.content-page .container ol {
+  text-align: left;
+  margin-left: 1.2rem;
+  padding-left: 1.2rem;
+  list-style-position: outside;
+}
+
+body.content-page .container li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
