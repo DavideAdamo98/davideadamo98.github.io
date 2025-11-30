@@ -555,6 +555,13 @@ body.home-page .container ol {
   padding-left: 0;
 }
 
+/* ===== Testo giustificato nella Home ===== */
+body.home-page .bio {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
 /* Altre pagine allineate a sinistra */
 body.content-page .container {
   text-align: left;
@@ -567,3 +574,60 @@ body.content-page .container ol {
   margin-left: 1.2rem;
   padding-left: 1.2rem;
 }
+
+
+
+/* ===== Font e tipografia coerenti su tutto il sito ===== */
+body {
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #222;
+}
+
+/* Titoli */
+h1, h2, h3 {
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Paragrafi e liste */
+p, li {
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Bio (home) — usa lo stesso font, ma giustificato */
+body.home-page .bio {
+  text-align: justify;
+  text-justify: inter-word;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+/* Affiliazioni e link nella home */
+.affiliation {
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Dark mode coerente */
+body.dark-mode {
+  color: #e6e6e6;
+}
+
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #e0e0e0;
+}
+
