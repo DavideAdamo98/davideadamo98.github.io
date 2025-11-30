@@ -506,17 +506,6 @@ body.dark-mode .social-btn:hover {
 
 
 /* ===== Correzione: allineamento per testi e liste ===== */
-.container p,
-.container ul,
-.container ol {
-  text-align: left;
-  margin-left: 0;
-  padding-left: 1.4rem;
-  max-width: 720px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .container li {
   margin-bottom: 0.6rem;
   line-height: 1.6;
@@ -548,4 +537,33 @@ body.content-page .container ol {
 body.content-page .container li {
   margin-bottom: 0.6rem;
   line-height: 1.6;
+}
+
+
+
+/* Home centrata */
+body.home-page .container {
+  text-align: center;
+}
+
+body.home-page .container p,
+body.home-page .container ul,
+body.home-page .container ol {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+}
+
+/* Altre pagine allineate a sinistra */
+body.content-page .container {
+  text-align: left;
+}
+
+body.content-page .container p,
+body.content-page .container ul,
+body.content-page .container ol {
+  text-align: left;
+  margin-left: 1.2rem;
+  padding-left: 1.2rem;
 }
