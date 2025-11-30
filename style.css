@@ -505,30 +505,11 @@ body.dark-mode .social-btn:hover {
 }
 
 
-/* ===== Impostazioni testo normali per le pagine di contenuto ===== */
-.container ul,
-.container ol {
-  text-align: left;
-  margin-left: 1.2rem;
-  padding-left: 1.2rem;
-  list-style-position: outside;
-}
-
-.container li {
-  margin-bottom: 0.6rem;
-  line-height: 1.6;
-}
-
-body:not(.home-page) .container {
-  text-align: left;
-}
-
-
 /* ===== Correzione: allineamento per testi e liste ===== */
 .container p,
 .container ul,
 .container ol {
-  text-align: left !important;
+  text-align: left;
   margin-left: 0;
   padding-left: 1.4rem;
   max-width: 720px;
@@ -539,10 +520,6 @@ body:not(.home-page) .container {
 .container li {
   margin-bottom: 0.6rem;
   line-height: 1.6;
-}
-
-body.activity-page .container {
-  text-align: left !important;
 }
 
 
