@@ -1,18 +1,23 @@
 /* ===== Stile generale ===== */
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Courier New", Courier, monospace;
   margin: 0;
-  background-color: #fafafa;
+  background-color: #faf7f1; /* cream paper */
   color: #222;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.8;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* ===== Navigazione con logo ===== */
+/* ===== Navigazione ===== */
 header {
-  background-color: white;
+  background-color: #faf7f1;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 10;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 nav {
@@ -20,295 +25,47 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  flex-wrap: wrap; /* per evitare che vada a capo in modo disordinato */
 }
 
 .nav-left a.logo {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #111;
   text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
 }
 
-.nav-left a.logo:hover {
-  color: #0070f3;
-}
+.nav-left a.logo:hover { color: #0070f3; }
 
 .nav-right {
   display: flex;
   align-items: center;
   gap: 2rem;
-  flex-wrap: nowrap;
 }
 
 .nav-right a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  font-size: 0.95rem;
   transition: color 0.3s ease;
-  white-space: nowrap;
 }
 
 .nav-right a:hover,
-.nav-right a.active {
-  color: #0070f3;
-}
+.nav-right a.active { color: #0070f3; }
 
-/* Pulsante tema */
+/* ===== Pulsante tema ===== */
 #theme-toggle {
-  background-color: #f2f2f2;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  cursor: pointer;
-  width: 40px;
-  height: 22px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  margin-left: 2rem; /* distanza dal link CV */
-}
-
-#theme-toggle .icon {
-  position: absolute;
-  font-size: 0.9rem;
-  transition: transform 0.3s ease;
-}
-
-#theme-toggle:hover {
-  background-color: #e0e0e0;
-}
-
-/* Tema scuro */
-body.dark-mode #theme-toggle {
-  background-color: #333;
-  border-color: #555;
-}
-
-body.dark-mode #theme-toggle .icon {
-  color: #ffcc00;
-}
-
-/* Nome bianco in dark mode */
-body.dark-mode .nav-left a.logo {
-  color: #fff;
-}
-
-/* ===== Contenitore principale ===== */
-.container {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-}
-
-/* ===== Titoli e testo ===== */
-h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-}
-
-h2 {
-  font-size: 1.6rem;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 0.3rem;
-  margin-top: 2.5rem;
-}
-
-p {
-  line-height: 1.7;
-  font-size: 1.1rem;
-  margin: 0.8rem 0;
-}
-
-/* ===== Liste ===== */
-ul li {
-  margin-bottom: 0.6rem;
-}
-
-/* ===== Footer ===== */
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: #666;
-  border-top: 1px solid #eee;
-}
-
-
-/* ===== Foto profilo ===== */
-/* ===== Stile homepage in stile accademico pulito ===== */
-.profile-photo {
-  width: 180px;
-  height: 180px;
+  background-color: transparent;
+  border: 1px solid #666;
   border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 2rem auto 1.5rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.name-title {
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.05rem;
-  margin-bottom: 0.4rem;
-}
-
-.affiliation {
-  text-align: center;
-  font-size: 0.95rem;
-  color: #444;
-  margin-bottom: 2rem;
-}
-
-.affiliation a {
-  color: #0070f3;
-  text-decoration: none;
-  position: relative;
-}
-
-.affiliation a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0%;
-  height: 1px;
-  background-color: #0070f3;
-  transition: width 0.3s ease;
-}
-
-.affiliation a:hover::after {
-  width: 100%;
-}
-
-.bio {
-  max-width: 700px;
-  margin: 0 auto 1.5rem auto;
-  line-height: 1.7;
-  font-size: 1rem;
-  color: #333;
-  text-align: justify;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.social-btn {
-  border: 1px solid #ccc;
-  padding: 0.4rem 0.9rem;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #333;
-  font-size: 0.9rem;
-  background-color: #f8f8f8;
-  transition: all 0.25s ease;
-}
-
-.social-btn:hover {
-  background-color: #0070f3;
-  color: white;
-  border-color: #0070f3;
-  transform: translateY(-2px);
-}
-
-
-
-
-/* ===== Pubblicazioni ===== */
-.pub-section {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-}
-
-.pub-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.pub-list li {
-  margin-bottom: 2rem;
-  line-height: 1.6;
-}
-
-.pub-list em {
-  font-style: italic;
-}
-
-.pub-buttons {
-  margin-top: 0.4rem;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #0070f3;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.35rem 0.9rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-  margin-right: 0.4rem;
-  transition: all 0.25s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn:hover {
-  background-color: #005ad6;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-
-
-
-/* ===== Effetto animato per i link nel testo ===== */
-a {
-  position: relative;
-  color: #0070f3;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0%;
-  height: 1px;
-  background-color: #0070f3;
-  transition: width 0.3s ease;
-}
-
-a:hover {
-  color: #0059c9;
-}
-
-a:hover::after {
-  width: 100%;
-}
-
-
-/* ===== Pulsante tema elegante ===== */
-#theme-toggle {
-  background-color: #f2f2f2;
-  border: 1px solid #ddd;
-  border-radius: 20px;
+  width: 35px;
+  height: 35px;
   cursor: pointer;
-  width: 38px;
-  height: 22px;
-  position: relative;
+  color: #555;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -316,318 +73,208 @@ a:hover::after {
   margin-left: 1rem;
 }
 
-#theme-toggle .icon {
-  position: absolute;
-  font-size: 0.9rem;
-  transition: transform 0.3s ease;
-}
-
 #theme-toggle:hover {
-  background-color: #e0e0e0;
-}
-
-/* Tema scuro */
-body.dark-mode #theme-toggle {
   background-color: #333;
-  border-color: #555;
+  color: #faf7f1;
 }
 
-body.dark-mode #theme-toggle .icon {
-  color: #ffcc00;
-}
-
-/* Transizione generale dei colori */
-body,
-header,
-.container,
-footer {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* ===== Tema scuro completo ===== */
-body.dark-mode {
-  background-color: #121212;
-  color: #e6e6e6;
-}
-
-body.dark-mode header {
-  background-color: #1e1e1e;
-  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05);
-}
-
-body.dark-mode a {
-  color: #66aaff;
-}
-
-body.dark-mode a::after {
-  background-color: #66aaff;
-}
-
-body.dark-mode .btn {
-  background-color: #1a73e8;
-}
-
-body.dark-mode .btn:hover {
-  background-color: #0f5fd6;
-}
-
-body.dark-mode .nav-left a.logo {
-  color: #ffffff;
-}
-
-
-
-
-
-/* ===== Ristilizzazione Homepage - Stile accademico sobrio ===== */
-
-/* Impostazioni di base */
+/* ===== Contenitore principale ===== */
 .container {
-  max-width: 720px;
+  max-width: 850px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
-  text-align: center;
+  padding: 3rem 2rem;
 }
 
+/* ===== Titoli e testo ===== */
+h1, h2, h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: normal;
+  color: #111;
+}
+
+h1 { font-size: 2.4rem; margin-bottom: 0.5rem; color: #444; }
+h2 { font-size: 1.4rem; color: #333; margin-top: 2.5rem; border-bottom: 1px solid #ddd; padding-bottom: 0.3rem; }
+h3 { font-size: 1.1rem; color: #333; }
+
+p, li {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  color: #222;
+}
+
+ul li { margin-bottom: 0.6rem; }
+
+/* ===== Link ===== */
+a {
+  color: #005ad6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover { color: #003f99; text-decoration: underline; }
+
+/* ===== Foto profilo e bio ===== */
 .profile-photo {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 1.5rem auto;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 2rem auto 1.5rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .name-title {
   text-align: center;
-  font-weight: 600;
-  font-size: 1.05rem;
+  font-weight: bold;
+  font-size: 1rem;
   margin-bottom: 0.4rem;
-  color: #111;
 }
 
 .affiliation {
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #444;
   margin-bottom: 2rem;
 }
 
 .bio {
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
   text-align: justify;
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.7;
-  margin-bottom: 1.2rem;
-  font-weight: 400;
+  text-justify: inter-word;
 }
 
-/* Link accademici (CEPAM, INRIA ecc.) */
-.affiliation a,
-.bio a {
-  color: #0066cc;
-  text-decoration: none;
-  position: relative;
-}
-
-.affiliation a::after,
-.bio a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0%;
-  height: 1px;
-  background-color: #0066cc;
-  transition: width 0.3s ease;
-}
-
-.affiliation a:hover::after,
-.bio a:hover::after {
-  width: 100%;
-}
-
-/* Pulsanti social */
+/* ===== Pulsanti social ===== */
 .social-links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-top: 1.8rem;
+  gap: 0.8rem;
+  margin-top: 2rem;
 }
 
 .social-btn {
-  font-size: 0.85rem;
+  border: 1px solid #444;
   padding: 0.35rem 0.9rem;
   border-radius: 6px;
-  background-color: #f2f2f2;
-  color: #333;
-  border: 1px solid #ccc;
   text-decoration: none;
+  color: #222;
+  font-size: 0.9rem;
+  background: #f8f8f8;
   transition: all 0.25s ease;
 }
 
 .social-btn:hover {
   background-color: #0070f3;
-  color: #fff;
-  border-color: #0070f3;
-  transform: translateY(-2px);
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #777;
-  margin-top: 3rem;
-}
-
-/* Tema scuro ottimizzato */
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-body.dark-mode .bio {
-  color: #ccc;
-}
-
-body.dark-mode .social-btn {
-  background-color: #222;
-  border-color: #444;
-  color: #ddd;
-}
-
-body.dark-mode .social-btn:hover {
-  background-color: #0070f3;
   color: white;
   border-color: #0070f3;
 }
 
-
-/* ===== Correzione: allineamento per testi e liste ===== */
-.container li {
-  margin-bottom: 0.6rem;
-  line-height: 1.6;
-}
-
-
-
-/* ===== Layout differenziato Home vs altre pagine ===== */
-
-/* Home centrata */
-body.home-page .container {
+/* ===== Footer ===== */
+footer {
   text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 3rem;
+  padding: 2rem 0;
 }
 
-/* Altre pagine allineate a sinistra */
-body.content-page .container {
-  text-align: left;
-}
-
-/* Liste nelle pagine di contenuto */
-body.content-page .container ul,
-body.content-page .container ol {
-  text-align: left;
-  margin-left: 1.2rem;
-  padding-left: 1.2rem;
-  list-style-position: outside;
-}
-
-body.content-page .container li {
-  margin-bottom: 0.6rem;
-  line-height: 1.6;
-}
-
-
-
-/* Home centrata */
-body.home-page .container {
-  text-align: center;
-}
-
-body.home-page .container p,
-body.home-page .container ul,
-body.home-page .container ol {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-}
-
-/* ===== Testo giustificato nella Home ===== */
-body.home-page .bio {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-
-/* Altre pagine allineate a sinistra */
-body.content-page .container {
-  text-align: left;
-}
-
-body.content-page .container p,
-body.content-page .container ul,
-body.content-page .container ol {
-  text-align: left;
-  margin-left: 1.2rem;
-  padding-left: 1.2rem;
-}
-
-
-
-/* ===== Font e tipografia coerenti su tutto il sito ===== */
-body {
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #222;
-}
-
-/* Titoli */
-h1, h2, h3 {
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  color: #111;
-}
-
-/* Paragrafi e liste */
-p, li {
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  color: #333;
-}
-
-/* Bio (home) — usa lo stesso font, ma giustificato */
-body.home-page .bio {
-  text-align: justify;
-  text-justify: inter-word;
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #333;
-}
-
-/* Affiliazioni e link nella home */
-.affiliation {
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 0.95rem;
-  color: #444;
-}
-
-/* Dark mode coerente */
+/* ===== Tema scuro ===== */
 body.dark-mode {
-  color: #e6e6e6;
+  background-color: #000;
+  color: #cacaca;
+  font-family: "Courier New", Courier, monospace;
 }
 
-body.dark-mode p,
-body.dark-mode li,
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3 {
-  color: #e0e0e0;
+body.dark-mode header {
+  background-color: #000;
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
 }
 
+body.dark-mode .nav-left a.logo { color: #f3ebac; }
+body.dark-mode .nav-right a { color: #cacaca; }
+body.dark-mode .nav-right a:hover { color: #a2ccf3; }
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 { color: #f3ebac; }
+body.dark-mode p, body.dark-mode li { color: #cacaca; }
+
+body.dark-mode a { color: #a2ccf3; }
+body.dark-mode a:hover { color: #c3e5ff; }
+
+body.dark-mode .social-btn {
+  background-color: transparent;
+  border: 1px solid #f3ebac;
+  color: #f3ebac;
+}
+
+body.dark-mode .social-btn:hover {
+  background-color: #f3ebac;
+  color: #000;
+}
+
+body.dark-mode #theme-toggle {
+  border-color: #f3ebac;
+  color: #f3ebac;
+}
+
+body.dark-mode #theme-toggle:hover {
+  background-color: #f3ebac;
+  color: #000;
+}
+
+
+
+
+/* ===== Layout Home e altre pagine ===== */
+
+/* HOME PAGE — centrata, bio giustificata */
+body.home-page .container {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+body.home-page .profile-photo {
+  display: block;
+  margin: 2rem auto 1.5rem auto;
+}
+
+body.home-page .affiliation {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+body.home-page .bio {
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.8;
+  color: inherit;
+}
+
+/* ALTRE PAGINE, testo allineato a sinistra */
+body.content-page .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: left;
+}
+
+body.content-page h2 {
+  margin-top: 2.5rem;
+  color: inherit;
+}
+
+body.content-page p,
+body.content-page ul,
+body.content-page ol {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+body.content-page li {
+  margin-bottom: 0.6rem;
+}
