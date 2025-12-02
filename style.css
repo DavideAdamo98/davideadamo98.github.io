@@ -278,3 +278,18 @@ body.content-page ol {
 body.content-page li {
   margin-bottom: 0.6rem;
 }
+
+
+
+
+/* ===== PDF Viewer ===== */
+iframe {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+body.dark-mode iframe {
+  background-color: #111;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
