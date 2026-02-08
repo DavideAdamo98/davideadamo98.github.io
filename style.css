@@ -113,7 +113,8 @@ a {
 
 a:hover { color: #003f99; text-decoration: underline; }
 
-/* ===== Foto profilo e bio ===== */
+
+/* ===== Photo and Bio ===== */
 .profile-photo {
   width: 180px;
   height: 180px;
@@ -127,7 +128,7 @@ a:hover { color: #003f99; text-decoration: underline; }
 .name-title {
   text-align: center;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin-bottom: 0.4rem;
 }
 
@@ -145,7 +146,8 @@ a:hover { color: #003f99; text-decoration: underline; }
   text-justify: inter-word;
 }
 
-/* ===== Pulsanti social ===== */
+
+/* ===== Social Buttons ===== */
 .social-links {
   display: flex;
   justify-content: center;
@@ -171,6 +173,7 @@ a:hover { color: #003f99; text-decoration: underline; }
   border-color: #0070f3;
 }
 
+
 /* ===== Footer ===== */
 footer {
   text-align: center;
@@ -180,7 +183,8 @@ footer {
   padding: 2rem 0;
 }
 
-/* ===== Tema scuro ===== */
+
+/* ===== Dark Mode ===== */
 body.dark-mode {
   background-color: #000;
   color: #cacaca;
@@ -192,11 +196,11 @@ body.dark-mode header {
   box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode .nav-left a.logo { color: #f3ebac; }
+body.dark-mode .nav-left a.logo { color: #a2ccf3; }
 body.dark-mode .nav-right a { color: #cacaca; }
 body.dark-mode .nav-right a:hover { color: #a2ccf3; }
 
-body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 { color: #f3ebac; }
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 { color: #a2ccf3; }
 body.dark-mode p, body.dark-mode li { color: #cacaca; }
 
 body.dark-mode a { color: #a2ccf3; }
@@ -204,22 +208,22 @@ body.dark-mode a:hover { color: #c3e5ff; }
 
 body.dark-mode .social-btn {
   background-color: transparent;
-  border: 1px solid #f3ebac;
-  color: #f3ebac;
+  border: 1px solid #a2ccf3;
+  color: #a2ccf3;
 }
 
 body.dark-mode .social-btn:hover {
-  background-color: #f3ebac;
+  background-color: #a2ccf3;
   color: #000;
 }
 
 body.dark-mode #theme-toggle {
-  border-color: #f3ebac;
-  color: #f3ebac;
+  border-color: #a2ccf3;
+  color: #a2ccf3;
 }
 
 body.dark-mode #theme-toggle:hover {
-  background-color: #f3ebac;
+  background-color: #a2ccf3;
   color: #000;
 }
 
