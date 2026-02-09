@@ -9,17 +9,21 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* --- Stile per gli abstract toggle --- */
+    /* --- abstract toggle style --- */
     .abstract {
       display: none;
       margin-top: 0.5em;
       margin-left: 1.2em;
       font-size: 0.9rem;
-      color: #cacaca;
+      color: #333;
       line-height: 1.4em;
       text-align: justify;
       text-justify: inter-word;
     }
+
+    body.dark-mode .abstract {
+      color: #cacaca;
+    } 
 
     .toggle-abstract {
       background: none;
