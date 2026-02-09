@@ -15,14 +15,14 @@
       margin-top: 0.5em;
       margin-left: 1.2em;
       font-style: italic;
-      color: var(--text-muted, #aaa);
+      color: var(--text-muted, #cacaca);
       line-height: 1.4em;
     }
 
     .toggle-abstract {
       background: none;
       border: none;
-      color: #7fc8ff;
+      color: #a2ccf3;
       cursor: pointer;
       font-size: 0.9em;
       margin-left: 0.5em;
@@ -30,7 +30,7 @@
     }
 
     .toggle-abstract:hover {
-      color: #a8daff;
+      color: #a2ccf3;
       text-decoration: underline;
     }
   </style>
@@ -66,23 +66,22 @@
           <strong>D. Adamo</strong>, M. Corneli, M. Vuillien and E. Vila. 
           <em>Neural approximation of Procrustes-Wasserstein transport maps.</em> 
           2026
-          <button class="toggle-abstract">▼ Abstract</button>
-
-          <div class="abstract">
-            Optimal Transport (OT) provides a rigorous mathematical framework for comparing empirical 
-            distributions, such as point clouds. However, standard formulations based on the Wasserstein distances are highly sensitive 
-            to global rigid transformations in the feature space. Unlike other approaches being computationally prohibitive (e.g. 
-            Gromov-Wasserstein) the Procrustes-Wasserstein (PW) distance addresses this limitation in a more scalable way by directly 
-            incorporating alignment into the optimization problem. However, current approaches remain confined to discrete settings and 
-            lacks generalization to unseen samples. In this work, we extend the PW framework to the continuous domain by formally deriving 
-            its dual and semi-dual formulations. Leveraging results in both convex analysis and, more recently, neural optimal transport, 
-            we introduce NeuralPW, a framework that jointly learns rigid alignments and continuous transport maps. We empirically 
-            demonstrate that NeuralPW accurately recovers geometric transformations, explicitly decoupling global pose alignment from 
-            local non-rigid deformation. Finally, we validate our approach on a real-world case study in archaeozoology, demonstrating 
-            its ability to robustly match high-density point clouds where discrete primal solvers are computationally intractable.
-          </div>
 
           <div class="pub-buttons">
+            <button class="toggle-abstract">▼ Abstract</button>
+            <div class="abstract">
+              Optimal Transport (OT) provides a rigorous mathematical framework for comparing empirical 
+              distributions, such as point clouds. However, standard formulations based on the Wasserstein distances are highly sensitive 
+              to global rigid transformations in the feature space. Unlike other approaches being computationally prohibitive (e.g. 
+              Gromov-Wasserstein) the Procrustes-Wasserstein (PW) distance addresses this limitation in a more scalable way by directly 
+              incorporating alignment into the optimization problem. However, current approaches remain confined to discrete settings and 
+              lacks generalization to unseen samples. In this work, we extend the PW framework to the continuous domain by formally deriving 
+              its dual and semi-dual formulations. Leveraging results in both convex analysis and, more recently, neural optimal transport, 
+              we introduce NeuralPW, a framework that jointly learns rigid alignments and continuous transport maps. We empirically 
+              demonstrate that NeuralPW accurately recovers geometric transformations, explicitly decoupling global pose alignment from 
+              local non-rigid deformation. Finally, we validate our approach on a real-world case study in archaeozoology, demonstrating 
+              its ability to robustly match high-density point clouds where discrete primal solvers are computationally intractable.
+            </div>
             <a href="https://hal.science/hal-05483278" class="btn">HTML</a>
           </div>
         </li>
