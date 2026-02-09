@@ -7,6 +7,34 @@
   <title>Publications - Davide Adamo</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* --- Stile per gli abstract toggle --- */
+    .abstract {
+      display: none;
+      margin-top: 0.5em;
+      margin-left: 1.2em;
+      font-style: italic;
+      color: var(--text-muted, #aaa);
+      line-height: 1.4em;
+    }
+
+    .toggle-abstract {
+      background: none;
+      border: none;
+      color: #7fc8ff;
+      cursor: pointer;
+      font-size: 0.9em;
+      margin-left: 0.5em;
+      transition: color 0.2s ease;
+    }
+
+    .toggle-abstract:hover {
+      color: #a8daff;
+      text-decoration: underline;
+    }
+  </style>
+
 </head>
 
 <body class="content-page">
@@ -38,19 +66,52 @@
           <strong>D. Adamo</strong>, M. Corneli, M. Vuillien and E. Vila. 
           <em>Neural approximation of Procrustes-Wasserstein transport maps.</em> 
           2026
-        <br>
-        <div class="pub-buttons">
-          <a href="https://hal.science/hal-05483278" class="btn">HTML</a>
-        </div>
+          <button class="toggle-abstract">▼ Abstract</button>
+
+          <div class="abstract">
+            Optimal Transport (OT) provides a rigorous mathematical framework for comparing empirical 
+            distributions, such as point clouds. However, standard formulations based on the Wasserstein distances are highly sensitive 
+            to global rigid transformations in the feature space. Unlike other approaches being computationally prohibitive (e.g. 
+            Gromov-Wasserstein) the Procrustes-Wasserstein (PW) distance addresses this limitation in a more scalable way by directly 
+            incorporating alignment into the optimization problem. However, current approaches remain confined to discrete settings and 
+            lacks generalization to unseen samples. In this work, we extend the PW framework to the continuous domain by formally deriving 
+            its dual and semi-dual formulations. Leveraging results in both convex analysis and, more recently, neural optimal transport, 
+            we introduce NeuralPW, a framework that jointly learns rigid alignments and continuous transport maps. We empirically 
+            demonstrate that NeuralPW accurately recovers geometric transformations, explicitly decoupling global pose alignment from 
+            local non-rigid deformation. Finally, we validate our approach on a real-world case study in archaeozoology, demonstrating 
+            its ability to robustly match high-density point clouds where discrete primal solvers are computationally intractable.
+          </div>
+
+          <div class="pub-buttons">
+            <a href="https://hal.science/hal-05483278" class="btn">HTML</a>
+          </div>
         </li>
         <li>
           <strong>D. Adamo</strong>, M. Vuillien, E. Vila and M. Corneli. 
           <em>Rethinking Multiple Kernel Learning under the lenses of Importance Weighted Monte Carlo Variational Inference.</em> 
           2025
-        <br>
-        <div class="pub-buttons">
-          <a href="https://hal.science/hal-05123496" class="btn">HTML</a>
-        </div>
+          <button class="toggle-abstract">▼ Abstract</button>
+
+          <div class="abstract">
+            Kernel methods have been widely used in machine learning as they are a powerful tool for implicitly mapping 
+            data into high-dimensional spaces, enabling the discovery of complex patterns that might be challenging to 
+            capture in the original feature space. Although some classification and regression problems can be successfully 
+            addressed with a single kernel, sometimes real-world scenarios exhibit complex structures, and it is desirable 
+            to employ several kernel types, one for each notion of similarity that one aims to take into account. This is where 
+            multiple kernel learning (MKL) comes into play. This paper revisits multi-kernel classification with a specific 
+            focus on kernel(s) selection in the light of recent developments in Monte Carlo (importance weighted) variational 
+            inference (MCVI). In the framework of kernelized logistic regression (KLR), we consider positive semidefinite 
+            linear combinations of kernels and treat the kernel weights as random variables. Proper choices of prior distributions 
+            coupled with the explicit derivation of the importance-weighted lower bound (IW-ELBO), generalization of the 
+            traditional variational lower bound (ELBO), allow us to both perform kernel selection via shrinking and to perform 
+            posterior inference on the kernel weights, without needing MCMC sampling. Unlike pure optimization-based approaches 
+            to MKL, our optimization problem does not require explicit constraints and can be optimized by standard stochastic 
+            gradient descent.
+          </div>
+
+          <div class="pub-buttons">
+            <a href="https://hal.science/hal-05123496" class="btn">HTML</a>
+          </div>
         </li>
       </ul>
     </div>
@@ -107,7 +168,6 @@
     const icon = toggle.querySelector(".icon");
     const body = document.body;
   
-    // Applica il tema salvato
     if (localStorage.getItem("theme") === "dark") {
       body.classList.add("dark-mode");
       icon.textContent = "☀️";
@@ -118,6 +178,16 @@
       const isDark = body.classList.contains("dark-mode");
       icon.textContent = isDark ? "☀️" : "🌙";
       localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+
+    // --- abstract toggle ---
+    document.querySelectorAll(".toggle-abstract").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const abstract = btn.nextElementSibling;
+        const isVisible = abstract.style.display === "block";
+        abstract.style.display = isVisible ? "none" : "block";
+        btn.textContent = isVisible ? "▼ Abstract" : "▲ Hide abstract";
+      });
     });
   </script>
 </body>
