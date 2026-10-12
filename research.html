@@ -22,7 +22,7 @@
         <a href="cv.html">CV</a>
         <button id="theme-toggle" aria-label="Cambia tema">
           <span class="icon">🌙</span>
-        </button>        
+        </button>
       </div>
     </nav>
   </header>
@@ -63,15 +63,16 @@
 
     <h2>Teaching (64h/y)</h2>
     <ul>
-      <li>Linear Algebra (from 2023)</li>
-      <li>Introduction to Probability and Statistics (from 2023)</li>
-      <li>Diplôme Universitaire - Intelligence Artificielle et Santé (from 2025) 
+      <li>Linear Algebra (2024 - 2025 - 2026)</li>
+      <li>Introduction to Probability and Statistics (2024 - 2025 - 2026)</li>
+      <li>Diplôme Universitaire - Intelligence Artificielle et Santé (2025 - 2026)
         <a href="https://univ-cotedazur.fr/formation/offre-de-formation/diplome-duniversite-intelligence-artificielle-et-sante#admission" target="_blank">Link</a></li>
     </ul>
 
-    <h2>Other activities</h2>
+    <h2>Reviewer activity</h2>
     <ul>
-      <li>Reviewer for : ICML 2026 (Silver Reviewer Award); NeurIPS 2026</li>
+      <li>Reviewer for ICML : 2026 (<strong>Silver Reviewer Award</strong>)</li>
+      <li>Reviewer for NeurIPS : 2026 (<strong>Top Reviewer - Main Track</strong>)</li>
     </ul>
   </main>
 
@@ -86,13 +87,13 @@
     const toggle = document.getElementById("theme-toggle");
     const icon = toggle.querySelector(".icon");
     const body = document.body;
-  
+
     // Applica il tema salvato
     if (localStorage.getItem("theme") === "dark") {
       body.classList.add("dark-mode");
       icon.textContent = "☀️";
     }
-  
+
     toggle.addEventListener("click", () => {
       body.classList.toggle("dark-mode");
       const isDark = body.classList.contains("dark-mode");
